@@ -3,16 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-    <title>Sachin & Vidya</title>
-    <meta name="description" content="Wedding invitation | Sachin & Vidya">
+    <title>Sachin & Vidya - Wedding Invitation</title>
+    <meta name="description" content="We joyfully invite you to share in our happiness as we unite in marriage on October 20th, 2026.">
 
 	<!-- Open Graph / WhatsApp / Facebook Link Preview -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Sachin Weds Vidya Wedding Invitation">
-<meta property="og:description" content="We joyfully invite you to share in our happiness as we unite in marriage on October 20th, 2026.">
-<meta property="og:url" content="https://sachinsyam.github.io/sac-inv/index.html">
-<meta property="og:image" content="https://sachinsyam.github.io/sac-inv/bg.jpeg">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Sachin Weds Vidya - Wedding Invitation">
+	<meta property="og:description" content="We joyfully invite you to share in our happiness as we unite in marriage on October 20th, 2026.">
+	<meta property="og:url" content="https://sachinsyam.github.io/sac-inv/">
+	<meta property="og:image" content="https://sachinsyam.github.io/sac-inv/bg.jpeg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta property="og:site_name" content="Sachin & Vidya Wedding">
 	
+	<!-- Twitter Card for Link Previews -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Sachin Weds Vidya - Wedding Invitation">
+	<meta name="twitter:description" content="We joyfully invite you to share in our happiness as we unite in marriage on October 20th, 2026.">
+	<meta name="twitter:image" content="https://sachinsyam.github.io/sac-inv/bg.jpeg">
 
     <!-- Google Fonts: Playfair Display, Lato, Great Vibes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -106,21 +115,27 @@
             content: '';
             position: absolute;
             inset: -8px;
-            border: 1px solid #C5A059; /* Gold */
+            border: 1px solid #C5A059;
             pointer-events: none;
             opacity: 0.5;
         }
 
-        /* Custom Scrollbar for mobile/desktop harmony */
+        /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #FBF9F6; }
         ::-webkit-scrollbar-thumb { background: #C5A059; border-radius: 10px; }
 
-        /* Touch friendly tap targets for mobile (iPhone iOS HIG) */
+        /* Touch friendly tap targets */
         button, a, .touch-target {
             min-height: 44px; 
             min-width: 44px;
             touch-action: manipulation;
+        }
+
+        /* Hero heading responsive sizing */
+        .hero-heading {
+            word-spacing: 0.1em;
+            line-height: 1.1;
         }
     </style>
 </head>
@@ -131,26 +146,26 @@
     <source src="music.mp3" type="audio/mpeg">
   </audio>
 <!-- Music Toggle Button -->
-<button id="musicToggle" class="fixed bottom-6 left-6 z-50 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-lg border border-gray-200 text-gray-800 hover:bg-white transition-all transform hover:scale-105 touch-manipulation" aria-label="Toggle Music">
+<button id="musicToggle" class="fixed bottom-6 left-6 z-50 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-lg border border-gray-200 text-gray-800 hover:bg-white transition-all transform hover:scale-110">
     
     <!-- Muted Icon (Default) -->
     <svg id="icon-muted" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" clip-rule="evenodd"></path>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/>
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"></path>
     </svg>
 
     <!-- Playing Icon (Hidden by default) -->
     <svg id="icon-playing" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/>
     </svg>
     
 </button>
 	
     <!-- Sticky Navbar -->
-    <header id="main-nav" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-champagne/90 backdrop-blur-md border-b border-gold/20" style="padding-top: max(0.75rem, env(safe-area-inset-top)); padding-bottom: 0.75rem;">
+    <header id="main-nav" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-champagne/90 backdrop-blur-md border-b border-gold/20 animate-fade-in" style="padding-top: max(0.75rem, env(safe-area-inset-top)); padding-left: max(0, env(safe-area-inset-left)); padding-right: max(0, env(safe-area-inset-right));">
         <div class="max-w-7xl mx-auto px-4 sm:px-8 flex justify-between items-center">
             <a href="#home" class="flex items-center space-x-2 touch-target">
-                <span class="font-script text-3xl sm:text-4xl text-gold">Sachin Weds Vidya</span>
+                <span class="font-script text-3xl sm:text-4xl text-gold">Sachin & Vidya</span>
             </a>
 
             <!-- Desktop Links -->
@@ -187,17 +202,17 @@
         <div class="absolute inset-0 bg-cover bg-center md:bg-[center_30%]" style="background-image: url('bg.jpeg');"></div>
         <div class="absolute inset-0 hero-overlay"></div>
 
-        <div class="relative z-20 max-w-3xl mx-auto text-champagne mt-10 w-full">
+        <div class="relative z-20 max-w-3xl mx-auto text-champagne mt-10 w-full animate-graceful-slide-in">
             <div class="animate-soft-float mb-6">
                 <p class="font-sans text-xs sm:text-sm tracking-[0.3em] uppercase text-gold-light mb-4">We are getting married</p>
-                <h1 class="font-serif text-5xl sm:text-6xl md:text-8xl text-champagne drop-shadow-lg leading-tight mb-2 whitespace-nowrap">
-					Sachin <span class="font-script text-gold-light text-6xl sm:text-7xl md:text-9xl px-2 font-normal">&amp;</span> Vidya
+                <h1 class="font-serif text-4xl sm:text-6xl md:text-8xl text-champagne drop-shadow-lg hero-heading">
+					Sachin <span class="font-script text-gold-light text-5xl sm:text-7xl md:text-9xl px-1 sm:px-2 font-normal">&amp;</span> Vidya
 				</h1>
                 <p class="font-serif italic text-lg sm:text-2xl text-champagne/90 mt-4">October 20, 2026</p>
             </div>
 
             <!-- Mobile-Optimized Countdown -->
-            <div class="bg-charcoal/40 backdrop-blur-md border border-gold/30 p-4 sm:p-6 rounded-2xl w-full max-w-lg mx-auto shadow-2xl reveal active mt-10">
+            <div class="bg-charcoal/40 backdrop-blur-md border border-gold/30 p-4 sm:p-6 rounded-2xl w-full max-w-lg mx-auto shadow-2xl mt-10">
                 <div class="grid grid-cols-4 gap-2 text-center">
                     <div class="p-2">
                         <span id="countdown-days" class="font-serif text-3xl sm:text-4xl text-gold-light block">00</span>
@@ -221,11 +236,9 @@
     </section>
 	
 	<!-- Scroll Down Indicator -->
-<!-- Scroll Down Indicator -->
-<!-- Outer div handles the absolute positioning and perfect centering -->
-<div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-full flex justify-center">
+<div class="flex justify-center pointer-events-none" style="position: fixed; bottom: 2.5rem; left: 50%; transform: translateX(-50%); animation: fadeIn 1.5s ease-out forwards; animation-delay: 1s;">
     <!-- Inner anchor handles the bounce animation -->
-    <a href="#souls" aria-label="Scroll down" class="animate-bounce text-white opacity-80 hover:opacity-100 transition-opacity flex flex-col items-center">
+    <a href="#souls" aria-label="Scroll down" class="animate-bounce text-white opacity-80 hover:opacity-100 transition-opacity flex flex-col items-center pointer-events-auto">
         <span class="text-sm font-medium tracking-widest uppercase mb-2 drop-shadow-md">Scroll</span>
         <svg class="w-6 h-6 drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
@@ -247,10 +260,9 @@
 
             <!-- Mobile responsive stack, desktop side-by-side -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 sm:gap-16">
-			
-			   <!-- Groom -->
-                <div class="flex flex-col items-center text-center reveal delay-2">
-                    <div class="w-48 h-48 sm:w-64 sm:h-64 rounded-full overflow-hidden img-border mb-6">
+                <!-- Groom -->
+                <div class="flex flex-col items-center text-center reveal delay-1">
+                    <div class="w-48 h-48 sm:w-64 sm:h-64 rounded-full overflow-hidden img-border mb-6 transform transition hover:scale-105 duration-700">
                         <img src="s1.jpg" alt="The Groom" class="w-full h-full object-cover">
                     </div>
                     <h3 class="font-serif text-3xl text-charcoal">Sachin Syam</h3>
@@ -259,11 +271,10 @@
                         "From the first conversation, Vidya captivated my heart. Choosing her as my lifelong partner is the most natural and joyful decision I will ever make."
                     </p>
                 </div>
-			
-			
+
                 <!-- Bride -->
-                <div class="flex flex-col items-center text-center reveal delay-1">
-                    <div class="w-48 h-48 sm:w-64 sm:h-64 rounded-full overflow-hidden img-border mb-6">
+                <div class="flex flex-col items-center text-center reveal delay-2">
+                    <div class="w-48 h-48 sm:w-64 sm:h-64 rounded-full overflow-hidden img-border mb-6 transform transition hover:scale-105 duration-700">
                         <img src="v1.jpg" alt="The Bride" class="w-full h-full object-cover">
                     </div>
                     <h3 class="font-serif text-3xl text-charcoal">Vidya Sahu</h3>
@@ -272,8 +283,6 @@
                         "Sachin is my calm and my greatest blessing. I cannot wait to dedicate the rest of my tomorrows to laughing, learning, and dreaming beside him."
                     </p>
                 </div>
-
-             
             </div>
         </div>
     </section>
@@ -302,44 +311,16 @@
                     </div>
                     <!-- Large touch-friendly buttons -->
                     <div class="flex flex-col space-y-3">
-					 <a href="https://addcal.io/e/zbnlrdb5vrus" target="_blank">
-                        <button class="w-full bg-gold text-white rounded-full py-4 text-xs font-bold uppercase tracking-widest shadow-md hover:bg-gold-dark transition touch-target">
-                            Add to Calendar 
+                        <button onclick="addToCalendar('ceremony')" class="w-full bg-gold text-white rounded-full py-4 text-xs font-bold uppercase tracking-widest shadow-md hover:bg-gold-dark transition soft-button">
+                            Add to Calendar
                         </button>
-						</a>
-                        <a href="https://maps.app.goo.gl/QJerPLHY8aT1DbeV9" target="_blank" class="w-full flex justify-center items-center bg-transparent border border-gold text-gold rounded-full py-4 text-xs font-bold uppercase tracking-widest hover:bg-gold hover:text-white transition touch-target">
+                        <a href="https://maps.app.goo.gl/QJerPLHY8aT1DbeV9" target="_blank" class="w-full flex justify-center items-center bg-transparent border border-gold text-gold rounded-full py-4 text-xs font-bold uppercase tracking-widest shadow-md hover:bg-gold/10 transition soft-button">
                             View Location
                         </a>
                     </div>
                 </div>
 
-                <!-- Reception Card -->
-				                <div class="bg-champagne rounded-2xl p-6 sm:p-10 shadow-lg border border-white reveal delay-1">
-                    <div class="text-center border-b border-blush-dark pb-6 mb-6">
-                        <h3 class="font-serif text-3xl text-charcoal">Reception</h3>
-                        <p class="font-sans text-sm text-charcoal-light mt-2">Between 4:00 PM &amp; 8:00 PM</p>
-                    </div>
-                    <div class="space-y-4 text-center font-sans text-sm text-charcoal-light font-light mb-8">
-                        <p><strong class="font-bold text-charcoal">Wednesday, October 21, 2026
-						<br>
-						Kindly avoid all kinds of gifts and presentations.
-						
-						</strong></p>
-                        <p>Izyan Convention Centre, Puthenkulam</p>
-                       
-                    </div>
-                    <!-- Large touch-friendly buttons -->
-                    <div class="flex flex-col space-y-3">
-                       <a href="https://addcal.io/e/k9bgmrz55go8" target="_blank">
-                        <button class="w-full bg-gold text-white rounded-full py-4 text-xs font-bold uppercase tracking-widest shadow-md hover:bg-gold-dark transition touch-target">
-                            Add to Calendar 
-                        </button>
-						</a>
-                        <a href="https://maps.app.goo.gl/d8LpE37NK29Dkwe2A" target="_blank" class="w-full flex justify-center items-center bg-transparent border border-gold text-gold rounded-full py-4 text-xs font-bold uppercase tracking-widest hover:bg-gold hover:text-white transition touch-target">
-                            View Location
-                        </a>
-                    </div>
-                </div>
+                <!-- Reception Card (Empty structurally preserved) -->
               
             </div>
         </div>
@@ -358,35 +339,27 @@
             <!-- Gallery Grid: 1 col mobile, 2 tablet, 3 desktop -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                 <!-- Gallery Items -->
-                <div class="relative h-72 rounded-xl overflow-hidden shadow-sm cursor-pointer reveal group">
+                <div class="relative h-72 rounded-xl overflow-hidden shadow-sm cursor-pointer reveal group delay-1">
                     <img src="p1.jpeg" alt="p1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-charcoal/20 opacity-0  transition-opacity flex items-center justify-center">
-                       
+                    <div class="absolute inset-0 bg-charcoal/20 opacity-0 transition-opacity flex items-center justify-center">
                     </div>
                 </div>
-                <div class="relative h-72 rounded-xl overflow-hidden shadow-sm cursor-pointer reveal group">
+                <div class="relative h-72 rounded-xl overflow-hidden shadow-sm cursor-pointer reveal group delay-2">
                     <img src="bng.jpeg" alt="p1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-charcoal/20 opacity-0  transition-opacity flex items-center justify-center">
-                       
+                    <div class="absolute inset-0 bg-charcoal/20 opacity-0 transition-opacity flex items-center justify-center">
                     </div>
                 </div>
-                <div class="relative h-72 rounded-xl overflow-hidden shadow-sm cursor-pointer reveal group">
+                <div class="relative h-72 rounded-xl overflow-hidden shadow-sm cursor-pointer reveal group delay-3">
                     <img src="p3.jpeg" alt="p1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-charcoal/20 opacity-0  transition-opacity flex items-center justify-center">
-                       
+                    <div class="absolute inset-0 bg-charcoal/20 opacity-0 transition-opacity flex items-center justify-center">
                     </div>
                 </div>
-			
-				
-               
-     
-             
             </div>
         </div>
     </section>
 
     <!-- -->
-    <!-- SECTION 4: Warm Regards -->
+     <!-- SECTION 4: Warm Regards -->
     <section id="warm-regards" class="py-20 sm:py-28 px-4 sm:px-8 bg-blush relative text-center">
         <div class="max-w-3xl mx-auto">
             <div class="reveal">
@@ -395,16 +368,11 @@
                     "With blessings from parents, relatives & friends."
                 </p>
                 <p class="font-sans text-sm sm:text-base text-charcoal-light font-light leading-relaxed mb-10 px-4">
-                    As we embark on this sacred journey of marriage, having you stand with us and surround us with your warm wishes is the most precious gift we could ever receive.
+                    There will be no reception on the previous day.
                 </p>
-				
-				<p class="font-sans text-sm sm:text-base text-charcoal-light font-light leading-relaxed mb-10 px-4">
-				Kindly avoid all kinds of gifts and presentations
-				</p>
-				
 
                 <!-- Toast/Blessing button -->
-                <button onclick="sendWarmBlessing()" class="bg-charcoal text-champagne rounded-full py-4 px-8 text-xs font-bold uppercase tracking-widest shadow-xl hover:bg-gold transition touch-target w-full sm:w-auto">
+                <button onclick="sendWarmBlessing()" class="bg-charcoal text-champagne rounded-full py-4 px-8 text-xs font-bold uppercase tracking-widest shadow-xl hover:bg-gold transition touch-target">
                     Send Warm Wishes
                 </button>
                 <p id="blessing-feedback" class="text-sm text-gold font-serif italic mt-4 opacity-0 transition-opacity duration-300 h-6">
@@ -415,12 +383,12 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-charcoal text-champagne py-12 px-4 text-center" style="padding-bottom: max(3rem, env(safe-area-inset-bottom));">
+    <footer class="bg-charcoal text-champagne py-12 px-4 text-center reveal" style="padding-bottom: max(3rem, env(safe-area-inset-bottom));">
         <div class="max-w-4xl mx-auto">
-            <span class="font-script text-4xl text-gold-light block mb-2">Vidya &amp; Sachin</span>
+            <span class="font-script text-4xl text-gold-light block mb-2">Sachin &amp; Vidya</span>
             <p class="font-sans text-xs tracking-widest uppercase text-champagne/60 mb-6">October 20, 2026</p>
             <p class="text-[10px] text-champagne/40 font-light">
-                Designed by Sachin
+                
             </p>
         </div>
     </footer>
@@ -439,10 +407,10 @@
             
             <!-- Mobile Optimized Navigation (Bottom on mobile, sides on desktop) -->
             <div class="absolute inset-x-0 bottom-10 md:bottom-1/2 md:translate-y-1/2 flex justify-between px-4 md:px-8 pointer-events-none" style="padding-bottom: env(safe-area-inset-bottom);">
-                <button onclick="prevPhoto(event)" class="pointer-events-auto bg-charcoal/50 backdrop-blur text-white p-4 rounded-full touch-target shadow-lg">
+                <button onclick="prevPhoto(event)" class="pointer-events-auto bg-charcoal/50 backdrop-blur text-white p-4 rounded-full touch-target shadow-lg hover:bg-gold transition-colors duration-300">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
                 </button>
-                <button onclick="nextPhoto(event)" class="pointer-events-auto bg-charcoal/50 backdrop-blur text-white p-4 rounded-full touch-target shadow-lg">
+                <button onclick="nextPhoto(event)" class="pointer-events-auto bg-charcoal/50 backdrop-blur text-white p-4 rounded-full touch-target shadow-lg hover:bg-gold transition-colors duration-300">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                 </button>
             </div>
@@ -451,20 +419,20 @@
 
     <!-- Calendar Chooser Modal -->
     <div id="calendar-modal" class="fixed inset-0 z-[60] bg-charcoal/80 backdrop-blur-sm hidden items-end sm:items-center justify-center p-0 sm:p-4 transition-opacity">
-        <div class="bg-champagne w-full sm:max-w-sm rounded-t-3xl sm:rounded-3xl p-6 sm:p-8 shadow-2xl transform transition-transform translate-y-full sm:translate-y-0" id="calendar-dialog" style="padding-bottom: max(2rem, env(safe-area-inset-bottom));">
+        <div class="bg-champagne w-full sm:max-w-sm rounded-t-3xl sm:rounded-3xl p-6 sm:p-8 shadow-2xl transform transition-transform translate-y-full sm:translate-y-0" id="calendar-dialog" style="padding-bottom: max(1.5rem, env(safe-area-inset-bottom));">
             <div class="flex justify-between items-center mb-6">
                 <h4 class="font-serif text-2xl text-charcoal">Add to Calendar</h4>
-                <button onclick="closeCalendarModal()" class="p-2 -mr-2 text-charcoal-light touch-target">
+                <button onclick="closeCalendarModal()" class="p-2 -mr-2 text-charcoal-light touch-target hover:text-charcoal transition-colors">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
                 </button>
             </div>
             
             <div class="space-y-4">
-                <a id="cal-link-google" href="#" target="_blank" class="flex items-center justify-between w-full p-4 rounded-xl border border-gold/30 hover:bg-gold/10 text-sm font-bold text-charcoal uppercase tracking-wider touch-target">
+                <a id="cal-link-google" href="#" target="_blank" class="flex items-center justify-between w-full p-4 rounded-xl border border-gold/30 hover:bg-gold/10 text-sm font-bold text-charcoal uppercase tracking-widest transition">
                     <span>Android/Google Calendar</span>
                     <span class="text-gold">&rarr;</span>
                 </a>
-                <button onclick="downloadICSFile()" class="flex items-center justify-between w-full p-4 rounded-xl border border-gold/30 hover:bg-gold/10 text-sm font-bold text-charcoal uppercase tracking-wider text-left touch-target">
+                <button onclick="downloadICSFile()" class="flex items-center justify-between w-full p-4 rounded-xl border border-gold/30 hover:bg-gold/10 text-sm font-bold text-charcoal uppercase tracking-widest transition">
                     <span>Apple / Outlook</span>
                     <span class="text-gold">&rarr;</span>
                 </button>
@@ -522,7 +490,7 @@
         /* Calendar Logic */
 			  const eventsData = {
 			ceremony: {
-				title: "Vidya Weds Sachin",
+				title: "Sachin Weds Vidya",
 				details: "The Muhurtham is between 11:00 AM & 11:40 AM at C Kesavan Memorial Town Hall, Kollam.",
 				start: "20261020T053000Z",
 				end: "20261020T061000Z",
@@ -530,7 +498,7 @@
 				icsEnd: "20261020T114000"
 			},
 			reception: {
-				title: "Vidya & Sachin's Wedding Reception",
+				title: "Sachin & Vidya's Wedding Reception",
 				details: "At Izyan Convention Centre, Puthenkulam.",
 				start: "20261021T103000Z",
 				end: "20261021T143000Z",
